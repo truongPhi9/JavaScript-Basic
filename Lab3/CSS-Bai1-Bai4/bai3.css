@@ -1,0 +1,96 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background: linear-gradient(-100deg, blue, rgb(109, 109, 165));
+    padding: 3.2%;
+}
+
+.box {
+    /* border: 1px solid gray; */
+    width: 400px;
+    height: 500px;
+    margin: 0 auto;
+    margin-top: 50px;
+    border-radius: 30px;
+    padding: 10px;
+    background-color: rgb(234,237,239);
+    box-shadow: 1px 1px 30px black;
+}
+
+#show-answer {
+    margin: 0 auto;
+    width: 100%;
+    height: 150px;
+    /* border: 2px solid gray; */
+    font-size: 40px;
+    border-radius: 30px;
+    text-align: right;
+}
+
+#show-answer #in-answer {
+    /* border: 1px solid gray; */
+    width: 80%;
+    height: 30%;
+    margin: 0 auto;
+    border-radius: 25px;
+    font-size: 25px;
+    color: gray;
+    padding: 10px;
+}
+
+#show-answer #in-answer-1 {
+    /* border: 1px solid gray; */
+    margin: 0 auto;
+    width: 80%;
+    height: 50%;
+    border-radius: 25px;
+    font-size: 55px;
+}
+
+.button-box {
+    text-align: center;
+}
+
+.button-box button {
+    padding: 10px;
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+    border-radius: 60px;
+    font-size: 30px;
+    border: none;
+    background-color: rgba(239, 239, 239, 0.411);
+}
+
+.button-box button:active {
+    font-size: 25px;
+    margin-bottom: 0px;
+}
+
+.button-box button:hover {
+    box-shadow: 1px 1px 5px gray;
+}
+
+.row-1 .calculation {
+    background-color: #20B2AA;
+}
+
+.row-2 .calculation {
+    background-color: #FFA500;
+}
+
+.row-3 .calculation {
+    background-color: #F08080;
+    
+}
+
+.row-4 .calculation {
+    background-color: #7D93E0;
+}

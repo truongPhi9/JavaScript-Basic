@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/bai4.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <title>PS21478-Trương Tước Phi</title>
+</head>
+<body ng-app="myApp">
+    <div class="box-1" ng-controller="display">
+        <div style="text-align: center; font-size: 25px;">Đăng Ký Thành Viên</div>
+        <div class="space"></div>
+        <form action="" name="frm">
+            <div class="box-input-1">   
+                <div class="title">Mã sinh viên</div>
+                <input ng-change="changeCodeStudent()" type="text" id="codeStudent" name="codeStu" ng-model="codeStu" required minlength="1" maxlength="20">
+                <i id="noti-1" ng-if="frm.codeStu.$invalid">Bạn chưa nhập mã sinh viên</i>
+            </div>
+            <div class="space"></div>
+            <div class="box-input-1">
+                <div class="title">Họ và tên</div>
+                <input ng-change="changeNameStudent()" type="text" id="nameStudent" ng-model="nameStu" name="nameStu" required minlength="1" maxlength="30">
+                <i id="noti-2" ng-if="frm.nameStu.$invalid">Bạn chưa nhập họ tên</i>
+            </div>
+            <div class="space"></div>
+            <div class="box-input-1">
+                <div class="title">Email</div>
+                <input ng-change="changeEmail()" type="text" id="email" name="emailFormat" ng-model="emailFormat" required minlength="1" maxlength="60">
+                <i id="noti-3" ng-if="frm.emailFormat.$invalid">Bạn chưa nhập email</i>
+                <i id="show-noti">Bạn nhập không đúng email</i>
+            </div>
+            <div class="space"></div>
+            <fieldset id="gender">
+                <legend>Giới tính</legend>
+                <input ng-change="changeGender()" type="radio" id="check" value="1" name="gender" ng-model="gender"> <label for="check">Nam</label>
+                <input ng-change="changeGender()" type="radio" id="check1" value="2" name="gender" ng-model="gender"> <label for="check1">Nữ</label>
+            </fieldset>
+            <i id="noti-4" ng-if="!gender">Bạn chưa chọn giới tính</i>
+            <div class="space"></div>
+            <fieldset id="favorite-1">
+                <legend>Sở Thích</legend>
+                <input ng-change="changeFavorite()" type="checkbox" name="favorite" ng-model="favorite1" id="sport"> <label for="sport">Thể thao</label>
+                <input ng-change="changeFavorite()" type="checkbox" name="favorite" ng-model="favorite2" id="travel"> <label for="travel">Du lịch</label>
+                <input ng-change="changeFavorite()" type="checkbox" name="favorite" ng-model="favorite3" id="music"> <label for="music">Âm nhạc</label>
+                <input ng-change="changeFavorite()" type="checkbox" name="favorite" ng-model="favorite4" id="food"> <label for="food">Ẩm thực</label>
+                <input ng-change="changeFavorite()" type="checkbox" name="favorite" ng-model="favorite5" id="another"> <label for="another">khác</label>
+            </fieldset>
+            <i id="noti-5" ng-if="!favorite1 && !favorite2 && !favorite3 && !favorite4 && !favorite5">Bạn chưa chọn sở thích</i>
+            <div class="space"></div>
+            <div class="box-input-4">
+                <div class="title">Quốc tịch</div>
+                <!-- <input list="job"> -->
+                <select id="nationality" ng-model="nationality" ng-change="changeNationality()">
+                    <option value="0">Chọn Quốc Tịch</option>
+                    <option value="1">Mỹ</option>
+                    <option value="2">Việt Nam</option>
+                    <option value="3">Trung Quốc</option>
+                    <option value="4">Anh</option>
+                    <option value="5">Pháp</option>
+                </select>
+                <i id="noti-6" ng-if="nationality == 0 || !nationality">Bạn chưa chọn quốc tịch</i>
+            </div>
+            <div class="space"></div>
+            <div class="box">
+                <div class="title">Ghi chú</div>
+                <textarea  class="text" name="" id="" cols="60" rows="5" tabindex="2"></textarea>
+            </div>
+            <div style=" text-align: center; margin: 10px;" ng-if="!frm.codeStu.$invalid && !frm.nameStu.$invalid && !frm.emailFormat.$invalid && gender && 
+            (favorite1 || favorite2 || favorite3 || favorite4 || favorite5) && nationality != 0 && nationality">
+                <span style="color: green;">Bạn đã nhập đúng dữ liệu</span>
+            </div>
+            <div style="text-align: center;"> 
+                <button type="button" class="box-button" onclick="registration()">Đăng ký</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+<script src="js/bai5.js"></script>

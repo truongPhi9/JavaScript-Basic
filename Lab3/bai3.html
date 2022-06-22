@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS-Bai1-Bai4/bai3.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <div id="show-answer">
+            <div id="in-answer"></div>
+            <div id="in-answer-1"></div>
+        </div>
+        <div class="button-box">
+            <div class="row-1">
+                <button onclick="inputButton(1)">1</button>
+                <button onclick="inputButton(2)">2</button>
+                <button onclick="inputButton(3)">3</button>
+                <button onclick="inputCalculation('+')" class="calculation">+</button>
+            </div>
+            <div class="row-2">
+                <button onclick="inputButton(4)">4</button>
+                <button onclick="inputButton(5)">5</button>
+                <button onclick="inputButton(6)">6</button>
+                <button onclick="inputCalculation('-')" class="calculation">-</button>
+            </div>
+            <div class="row-3">
+                <button onclick="inputButton(7)">7</button>
+                <button onclick="inputButton(8)">8</button>
+                <button onclick="inputButton(9)">9</button>
+                <button onclick="inputCalculation('x')" class="calculation">x</button>
+            </div>
+            <div class="row-4">
+                <button onclick="clearInput()">C</button>
+                <button onclick="inputButton(0)">0</button>
+                <button onclick="outputResult()">=</button>
+                <button onclick="inputCalculation('÷')" class="calculation">÷</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    var firstNumber = null;
+    var secondNumber = null;
+    var calculation = null;
+    var result = null;
+
+    /// ham nhap cac so vao man hinh
+    function inputButton(num) {
+        if(calculation == null) {
+            firstNumber = document.getElementById('in-answer').innerHTML = num;
+        }else if(calculation != null) {
+            secondNumber = document.getElementById('in-answer').innerHTML = num;
+        }
+
+        /// neu nguoi dung chon phep tinh thi hien thi so thu hai
+        if(calculation != null) {
+            document.getElementById('in-answer').innerHTML = firstNumber + ' ' + calculation + ' ' + secondNumber;
+        }
+    }
+
+    /// ham lay cac phep tinh 
+    function inputCalculation(cal) {
+        if(cal == '+') {
+            calculation = '+';
+        }else if(cal == '-') {
+            calculation = '-';
+        }else if(cal == 'x') {
+            calculation = 'x';
+        }else if(cal == '÷') {
+            calculation = '÷';
+        }
+        
+        if(calculation == null) {
+            document.getElementById('in-answer').innerHTML = firstNumber + ' ' + calculation;
+        }
+    }
+    
+    /// ham xuat ra ket qua cho may tinh
+    function outputResult() {
+        if(calculation == '+') {
+            result = firstNumber + secondNumber;
+            document.getElementById('in-answer-1').innerHTML = result;
+        }else if(calculation == '-') {
+            result = firstNumber - secondNumber;
+            document.getElementById('in-answer-1').innerHTML = result;
+        }else if(calculation == 'x') {
+            result = firstNumber * secondNumber;
+            document.getElementById('in-answer-1').innerHTML = result;
+        }else if(calculation == '÷') {
+            result = firstNumber / secondNumber;
+            document.getElementById('in-answer-1').innerHTML = result;
+        }
+
+        if(result > 0 || result < 0) {
+            firstNumber = null;
+            secondNumber = null;
+            calculation = null;
+            result = null;
+            document.getElementById('in-answer').innerHTML = "";
+        }
+    }
+
+    function clearInput() {   /// xoa cac du lieu trong input
+        firstNumber = null;
+        secondNumber = null;
+        calculation = null;
+        result = null;
+        document.getElementById('in-answer').innerHTML = "";
+        document.getElementById('in-answer-1').innerHTML = "";
+    }
+</script>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/bai3.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <h2>
+            Thời gian bây giờ là
+        </h2>
+        <div id="wel">
+            <script>
+                setTimeout('Xin chào', 1000);
+            </script>
+        </div>
+        <div class="in-box" onclick="startDropTime()">
+            <div class="box-hour">
+                <span id="hour">00</span>
+                <span class="title">Giờ</span>
+            </div>
+            <div class="mins-hour">
+                <span id="mins">00</span>
+                <span class="title">Phút</span>
+            </div>
+            <div class="second-hour">
+                <span id="second">00</span>
+                <span class="title">Giây</span>
+            </div>
+        </div>
+        <div class="box-button">
+            <button onclick="reload()">Nạp lại</button>
+        </div>
+    </div>
+</body>
+</html>
+<script src="JS/bai3.js"></script>

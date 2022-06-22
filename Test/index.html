@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <div class="title">
+            Tính tiền mua sản phẩm
+        </div>
+        <div class="box-1">
+            <span>Số lượng</span>
+            <input type="text" id="soluong">
+        </div>
+        <div class="box-2">
+            <span>Đơn giá</span>
+            <input type="text" id="gia">
+        </div>
+        <div>
+            <div class="show-answer">
+                <button onclick="tinh()">Tính</button>
+            </div>
+            <div class="clear">
+                <button onclick="xoa()">Xóa</button>
+            </div>
+        </div>
+        <div>
+            <span>Khuyến mãi:</span>
+            <span id="km"></span>
+            <span>Thành tiền</span>
+            <span id="tongtien"></span>
+        </div>
+    </div>
+</body>
+</html>
+<script src="main.js"></script>

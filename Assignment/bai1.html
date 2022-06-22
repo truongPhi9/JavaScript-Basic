@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/bai1.css">
+    <title>PS21478-Trương Tước Phi</title>
+</head>
+<body>
+    <div class="big-box">
+        <div class="box">
+            <div class="title">
+                Giải Phương Trình Bậc 2
+            </div>
+            <div class="inline-box">
+                <div class="inbox-input">
+                    a : <input id="a1" type="text">
+                </div>
+                <div class="inbox-input">
+                    b : <input id="b2" type="text">
+                </div>
+                <div class="inbox-input">
+                    c : <input id="c3" type="text">
+                </div>
+                <div style="padding: 10px;"></div>
+                <div class="show-answer">
+                    <div class="answer-1">
+                        <button class="result" id="autonumber" onclick="addItem()">kết quả</button>
+                    </div>
+                    <div class="random">
+                        <button onclick="random()" class="randomnumber">Cho số</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="second-box">
+            <div class="box-output">
+                <span style="font-weight: 600;">Phương Trình : </span> 
+                <span style="font-size: 20px;" id="equation"></span>
+                <div class="in-box-output">
+                    <div id="notifi"></div>
+                    <div id="x1"></div>
+                    <div id="x2"></div>
+                </div>
+            </div>
+            <div class="box-output">
+                <span style="font-weight: 600;">
+                    <span>Hiện Thị :</span> 
+                    <span id="hour" style="padding-right: 0px;"></span>
+                    <span id="Minutes" style="padding-right: 0px;"></span>
+                    <span id="second"></span>
+                </span>  
+                <span id="equation"></span>
+                <div class="in-box-output">
+                    Số Lần Giải : <span id="count">0</span>
+                    <div>Tổng 2 nghiệm : <span id="sum"></span></div>
+                    <div>                
+                        <div id="time">
+                            <script>
+                                /// hien thi ngay thang nam tren ma hinh
+                                var time = new Date();
+                                var day = time.getDate();
+                                var month = time.getMonth();
+                                var year = time.getFullYear();
+                                document.write('Ngày : ' + day + ' / ' + month + ' / ' + year);
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="js/bai1.js"></script>

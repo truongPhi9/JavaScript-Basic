@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bai2.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="all-box">
+        <div class="box" id="box">
+            <div class="title">
+                <h2>
+                    Các sản phẩm hoa
+                </h2>
+            </div>
+            <table border="0">
+                <tr class="first-child">
+                    <td><input id="checkfrom" type="checkbox" onchange="allItem()"></td>
+                    <th>Tên sản phẩm hoa</th>
+                    <th>Giá</th>
+                    <th>Mua</th>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" onchange="disable(this)" click></td>
+                    <td>Hành phúc trọng vẹn</td>
+                    <td>900000</td>
+                    <td><button id="choose" class="button-by" onclick="addItem(this)" disabled>Chọn</button></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" onchange="disable(this)"></td>
+                    <td>Con đường thành công</td>
+                    <td>1750000</td>
+                    <td><button class="button-by" onclick="addItem(this)" disabled>Chọn</button></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" onchange="disable(this)"></td>
+                    <td>Phú quốc</td>
+                    <td>1300000</td>
+                    <td><button class="button-by" onclick="addItem(this)" disabled>Chọn</button></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" onchange="disable(this)"></td>
+                    <td>Vững bước</td>
+                    <td>1150000</td>
+                    <td><button class="button-by" onclick="addItem(this)" disabled>Chọn</button></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" onchange="disable(this)"></td>
+                    <td>Một cõi đi về</td>
+                    <td>950000</td>
+                    <td><button class="button-by" onclick="addItem(this)" disabled>Chọn</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="box-1" id="show-box-1">
+            <table id="show-cart">
+                <div class="title-1">
+                    <h2>
+                        Sản phẩm của bạn
+                    </h2>
+                </div>
+            </table>
+            <div style="text-align: center;">
+                <span class="title" style="font-weight: 550; font-size: 30px;">Tổng Tiền : </span> 
+                <span style="font-size: 30px; color: white;" id="money">0</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="js/bai2.js"></script>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="kq"></div>
+    <script>
+        var tin = new Object();
+        var laptop = {
+            ten: 'Asus',
+            gia: '1000',
+        };
+        tin.tieude = 'Truong Tuoc Phi';
+        tin.ngaydang = '20/12/2022';
+        var ptb2 = new Object();
+        ptb2. a = 4;
+        ptb2.b = 10;
+        ptb2.c = -1;
+        ptb2.giai = function() {
+            ///tinh deltal cho phuong trinh;
+
+        }
+        ptb2.nhap = function() {
+
+        }
+
+        var sv = {
+            ho: 'Nguyen Ngoc',
+            ten: 'bao chau',
+            namsinh: 2004, 
+            hoten: function() {
+                var hoten = this.ho + " " + this.ten;
+                hoten = hoten.toUpperCase();
+                return hoten;
+            }
+        }
+        console.log(tin);
+        console.log(laptop);
+        console.log(sv);
+        document.getElementById('kq').innerHTML = sv.hoten();
+    </script>
+</body>
+</html>

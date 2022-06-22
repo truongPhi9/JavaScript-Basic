@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truong Tuoc Phi - Lab2</title>   
+</head>
+<style>
+    /* .container {
+        border: 1px solid gray;
+        border-radius: 10px;
+        width: 40%;
+        margin: 0 auto;
+    } */
+
+    table {
+        border-collapse: collapse;
+        margin: 0 auto;
+    }
+    
+    tr .title {
+        padding: 5px 80px 5px 80px;
+        background-color: blue;
+        color: yellow;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .bg, .br {
+        background-color: greenyellow;
+        color: blueviolet;
+    }
+
+    .dbg td {
+        background-color: greenyellow;
+        color: blueviolet;
+        border-radius: 0 0 10px 10px;
+    }
+
+    tr .title h4 {
+        margin: 0;
+        font-size: 25px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+    }
+
+    tr td span {
+        margin-left: 30px;
+        font-size: 20px;
+    }
+    
+    #ten, #namsinh, #tuoi {
+        margin-left: 5px;
+    }
+</style>
+<body>
+    <div class="container">
+        <table>
+            <tr>
+                <td class="title"><h4>Thông Tin Sinh Viên</h4></td>
+            </tr>
+            <div class="br">
+                <tr class="bg">
+                    <td>
+                        <p>
+                            <span>Họ Và Tên : </span>
+                            <span class="mr" id="ten"></span> 
+                        </p>
+                    </td>
+                </tr>
+                <tr class="bg">
+                    <td>
+                        <p>
+                            <span>Năm Sinh : </span>
+                            <span class="mr" id="namsinh"></span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="dbg">
+                    <td>
+                        <p>
+                            <span>Tuổi : </span>
+                            <span class="mr" id="tuoi"></span>
+                        </p>
+                    </td>
+                </tr>
+            </div>
+        </table>
+    </div>
+    <script>
+        // nhap ho ten va nam sinh
+        var hoten = prompt("Bạn Tên Gì");
+        var ngaysinh = prompt("Ban sinh nam nao");
+        
+        // Ham tinh tuoi hien tai
+        function inTuoi(namsinh) {
+            var namHienTai = new Date();
+            var x = namHienTai.getFullYear();
+            return x - namsinh;
+        }
+
+        var namNay = new Date();
+        var yy = namNay.getFullYear();
+        
+        // kiem tra nhap ten
+        if(hoten == '') {
+            document.getElementById('ten').innerHTML = 'Họ tên của sinh viên';
+        }else if(isNaN(hoten) == false) {
+            alert("Lỗi Nhập Họ Tên");
+            document.getElementById('ten').innerHTML = 'Nhập sai dữ liệu';
+        }else {
+            document.getElementById("ten").innerHTML = hoten;
+        }
+
+        /// kiem tra ngay sinh
+        if(ngaysinh >= yy) {
+            alert("Lỗi ngày sinh");
+            document.getElementById('namsinh').innerHTML = 'Lỗi Ngày Sinh';
+            document.getElementById("tuoi").innerHTML = '0';
+        }else {
+            document.getElementById("namsinh").innerHTML = ngaysinh;
+            document.getElementById("tuoi").innerHTML = inTuoi(ngaysinh);
+        }
+    </script>
+</body>
+</html>

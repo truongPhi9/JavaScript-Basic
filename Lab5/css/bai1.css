@@ -1,0 +1,99 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background: linear-gradient(
+        -115deg,
+        #2a2df1 10%,
+        #b815ea 90%
+    ) no-repeat center center fixed;
+}
+
+.in-box {
+    width: 380px;
+    height: 620px;
+    border: 1px solid gray;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 1px 1px 30px black;
+}
+
+.in-box img {
+    width: 100%;
+    height: 400px;
+}
+
+.in-box .box-info .title{
+    font-size: 20px;
+    text-align: center;
+    font-weight: 550;
+}
+
+.box-info .amount {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+.box-info .amount input {
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    font-size: 18px;
+    border: 1px solid gray;
+}
+
+.box-info .amount button {
+    width: 30px;
+    height: 32px;
+    border: none;
+    font-size: 20px;
+    text-align: center;
+    background-color: #9e9fdde5;
+}
+
+.box-info .amount button:hover {
+    background-color: #2a2df1;
+    color: white;
+}
+
+.title-product {
+    width: 80%;
+    border-radius: 10px;
+    vertical-align: middle;
+    height: 30%;
+    padding: 10px;
+    border: 1px solid #2a2df1;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.Total-money {
+    width: 80%;
+    border-radius: 10px;
+    vertical-align: middle;
+    height: 30%;
+    padding: 10px;
+    background-color: rgb(42, 190, 42);
+    color: white;
+    margin: auto;
+    margin-top: 10px;
+    font-size: 20px;
+}

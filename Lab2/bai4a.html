@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box {
+        /* border: 1px solid gray; */
+        width: 530px;
+        height: 250px;
+        margin: 0 auto;
+        margin-top: 10%;
+
+    }
+
+    .box .title {
+        font-size: 27px;
+        text-transform: uppercase;
+        text-align: center;
+        /* border: 1px solid gray; */
+        background-color: #4ecc33;
+        color: #334ECC;
+        border-radius: 10px 10px 0 0;
+        padding: 10px;
+    }
+
+    .box .in-box {
+        background-color: #B133CC;
+        border-radius: 0 0 10px 10px;
+        font-size: 27px;
+        padding: 60px;
+        padding-top: 20px;
+    }
+
+    .box .in-box-1 {
+        margin-left: 30px;
+        position: relative;
+    }
+
+    #cout {
+        font-size: 40px;
+        color: red;
+    }
+
+    .in-box .notification {
+        font-size: 20px;
+        font-style: italic;
+        color: aqua;
+    }
+
+    .in-box .show {
+        font-size: 29.4px;
+        color: #FFDF00;
+    }
+
+    .button {
+        text-align: center;
+    }
+
+    .button input {
+        position: absolute;
+        top: 120%;
+        right: 31%;
+        font-size: 20px;
+        padding: 5px;
+        background-color: #334ECC;
+        color: white;
+        border: 1px solid #334ECC;
+    }
+
+    .button input:hover {
+        color: #334ECC;
+        background-color: white;
+    }
+</style>
+<body>
+    <div class="box">
+        <div class="title">
+            Lưu biến vào sesssionstorage
+        </div>
+        <div class="in-box">
+            <div class="in-box-1">
+                <span class="show">Bạn đã xem trang này:</span> 
+                <span id="cout"></span> <span class="show">lần</span>
+                <div class="notification">
+                    Gõ phím F5 để nạp lại trang để xem kết quả
+                </div>
+                <div class="button">
+                    <input id="clear" type="button" value="Xóa Số Lần Xem" onclick="clearIteam()">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var view = localStorage.getItem('cout');
+        if(view == null) {
+            view = 0;
+        }else {
+            view++;
+        }
+        localStorage.setItem('cout', view);
+        document.getElementById('cout').innerHTML = view;
+    </script>
+    <script>
+        function clearIteam() {
+            localStorage.clear();
+            location.reload();
+        }
+    </script>
+</body>
+</html>

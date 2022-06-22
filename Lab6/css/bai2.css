@@ -1,0 +1,108 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background: linear-gradient(
+        115deg,
+        rgba(86, 216, 228, 1) 10%,
+        rgba(159, 1, 234, 1) 90%
+    ) no-repeat center center fixed;
+}
+
+.box {
+    /* border: 1px solid gray; */
+    box-shadow: 1px 1px 20px black;
+    width: 550px;
+    /* min-height: 410px; */
+    margin: 0 auto;
+    margin-top: 40px;
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+.second-box {
+    width: 500px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.box .title {
+    width: 100%;
+    height: 40px;
+    background-color: rgba(159, 1, 234, 1);
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 20px 20px 0 0;
+    text-transform: uppercase;
+}
+
+.inbox {
+    margin: 25px 0 25px 0;
+
+}
+
+span {
+    font-size: 20px;
+}
+
+.input {
+    position: absolute;
+    width: 325px;
+    height: 0px;
+    padding: 15px;
+    left: 155px;
+    font-size: 18px;
+}
+
+.input:focus {
+    outline: none;
+}
+
+select {
+    position: absolute;
+    left: 155px;
+    width: 358px;
+    height: 35px;
+    font-size: 18px;
+}
+
+.ra {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+}
+
+.sub button {
+    margin-top: 10px;
+    font-size: 20px;
+    padding: 4px 20px;
+    border: none;
+    color: white;
+    background-color: rgba(159, 1, 234, 1);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.sub button:hover {
+    border: 1px solid rgba(159, 1, 234, 1);
+    background-color: white;
+    color: rgba(159, 1, 234, 1);
+}
+
+.sub button:active {
+    font-size: 19.8px;
+}
+
+.insub {
+    text-align: center;
+}
+
+.noti #show-noti {
+    text-align: center;
+    color: rgba(255, 0, 0, 0.788);
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="bai3.js"></script>
+</head>
+<style>
+    p {
+        border: 1px solid #27D84C;
+        padding: 10px;
+    }
+
+    .line-1 {
+        margin-bottom: 20px;
+    }
+
+    .line-1 span {
+        margin-right: 15px;
+    }
+
+    .title {
+        font-size: 20px;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+
+    .big-box {
+        margin-top: 8%;
+    }
+
+    .box {
+        width: 350px;
+        height: 350px;
+        padding: 15px;
+        margin: 0 auto;
+        border: 1px solid gray;
+        border-radius: 5px;
+        box-shadow: 1px 1px 10px gray;
+    }
+
+    input {
+        width: 250px;
+        height: 30px;
+    }
+
+    .button-answer {
+        text-align: center;
+    }
+
+    button {
+        width: 50%;
+        /* margin-left: 25%; */
+        padding: 10px;
+        border-radius: 3px;
+        border: none;  
+        background-color: #78877C;
+        color: white;
+        text-transform: uppercase;
+    }
+
+    button:hover {
+        background-color: #939F96;
+        color: #475049;
+    }
+
+    .box-answer {
+        margin-top: 20px;
+        border: 1px solid gray;
+        padding: 20px;
+    }
+
+    .in-answer {
+        line-height: 40px;
+        font-size: 20px;
+    }
+</style>
+<body>
+    <div class="big-box">
+        <div class="box">
+            <form action="">
+                <div class="title">
+                    Tính chu vi và diện tích
+                </div>
+                <div class="line-1">
+                    <span>Nhập A </span> <input id="new-item-1" type="text">
+                </div>
+                <div class="line-1">
+                    <span>Nhập B </span> <input id="new-item-2" type="text">
+                </div>
+                <div class="button-answer" style="margin-top: 20px;">
+                    <button type="button" onclick="addItem()">Hiện thị kết quả</button>
+                </div>
+                <div class="box-answer">
+                    <div class="in-answer">
+                        Chu Vi : <Span id="answer-1"></Span>
+                    </div>
+                    <div class="in-answer">
+                        Diên Tích : <Span id="answer-2"></Span>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

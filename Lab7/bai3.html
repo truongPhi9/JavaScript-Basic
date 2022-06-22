@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bai3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <title>Document</title>
+</head>
+<body ng-app="myApp">
+    <form name="frm">
+        <div class="container" ng-controller="display" >
+            <div>
+                <span class="title">Tên sản phẩm</span>
+                <input type="text" class="input-text" required minlength="2" maxlength="30" name="nameProduct" ng-model="nameProduct">
+                <div class="noti">
+                    <em ng-if="frm.nameProduct.$invalid">Nhập tên sản phẩm từ 2 đến 30 ký tự</em>
+                </div>
+            </div>
+            <div>
+                <span class="title">Số lượng</span>
+                <input type="number" class="input-text" ng-model="quantity">
+                <div class="noti">
+                    <em ng-if="frm.quantity.$invalid || quantity > 100 || quantity < 1">Nhập số lượng từ 1 đến 100</em>
+                </div>
+            </div>
+            <div>
+                <span class="title">Nhà sản xuất</span>
+                <select name="manu" id="" class="input-option" ng-model="manu">
+                    <option value="0">Nơi sản xuất</option>
+                    <option value="2">Hồ Chí Minh</option>
+                    <option value="3">Hà Nội</option>
+                </select>
+                <div class="noti">
+                    <em ng-if="manu == 0 || !manu">Hãy chọn nơi sản xuất</em>
+                </div>
+            </div>
+            <div>
+                <span class="title">Tình trạng</span>
+                <div class="box-boder">
+                    <input type="radio" ng-model="status" value="1"> <span style="font-size: 19px;">Hàng cũ</span>
+                    <input type="radio" style="margin-left: 20px;" ng-model="status" value="2"><span style="font-size: 19px;">Hàng mới</span>
+                    <div class="noti">
+                        <em ng-if="!status">Vui lòng chọn Loại hàng</em>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <span class="title">Màu sắc</span>
+                <div class="box-boder">
+                    <input type="checkbox" name="" id="" class="1" ng-model="color1"> <span style="font-size: 19px;">Đỏ</span>
+                    <input type="checkbox" name="" id="" class="checkbox" ng-model="color2"> <span style="font-size: 19px;">Đen</span>
+                    <input type="checkbox" name="" id="" class="checkbox" ng-model="color3"> <span style="font-size: 19px;">Trắng</span>
+                    <div class="noti">
+                        <em ng-if="!color1 && !color2 && !color3">Vui lòng màu</em>
+                    </div>
+                </div>
+            </div>
+            <div class="box-button">
+                <button>Nhập sản phẩm</button>
+                <div>
+                    <i style="color: green; font-weight: 550;" ng-if="!frm.$invalid">bạn đã nhập dữ liệu đã chính xác</i>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
+<script src="js/bai3.js"></script>

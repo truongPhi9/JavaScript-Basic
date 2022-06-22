@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="stylesheet" href="css/bai1.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <div class="title">
+            the picture of nature
+        </div>
+        <div class="box-picture">
+            <div class="inbox">
+                <div class="box-in">
+                    <img id="pic" src="Picture/1.jpg" alt="">
+                    <span class="index"><span id="num-index">1</span>/8</span>
+                </div>
+                <button onclick="prew()" class="prew" id="prew"><i class="fa-solid fa-angle-left"></i></button>
+                <button onclick="next()" class="next" id="next"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </div>
+        <div class="button-index">
+            <button onclick="first()"><<</button>
+            <button onclick="last()">>></button>
+        </div>
+    </div>
+</body>
+</html>
+<script src="js/bai1.js"></script>

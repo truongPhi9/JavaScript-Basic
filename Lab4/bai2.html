@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/bai2.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="all-box">
+        <div class="box">
+            <div class="in-box">
+                <div class="title">
+                    Thông tin sinh viên
+                </div>
+                <div class="input-name">
+                    <span class="item-name">Họ và Tên</span> 
+                    <input id="name" type="text">
+                </div>
+                <div class="input-point">
+                    <span class="item-point">Điểm</span>
+                    <input id="point" type="text">
+                </div>
+                <div class="button-result">
+                    <button onclick="result()">Kết quả</button>
+                </div>
+                <div id="noti">
+                    * Bạn nhập sai dữ liệu vui lòng nhập lại
+                </div>
+            </div>
+        </div>
+        <div class="box-2">
+            <div class="title-2">
+                Hiển Thị
+            </div>
+            <div class="in-box-2">
+                <div>
+                    <span>Họ và tên : </span>
+                    <span id="name-result"></span>
+                </div>
+                <div>
+                    <span>Điểm TB : </span>
+                    <span id="point-result"></span>
+                </div>
+                <div>
+                    <span>Học Lực : </span>
+                    <span id="ability-result"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="JS/bai2.js"></script>

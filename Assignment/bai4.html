@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/bai4.css">
+    <title>PS21478-Trương Tước Phi</title>
+</head>
+<body>
+    <div class="box-1">
+        <div style="text-align: center; font-size: 25px;">Đăng Ký Thành Viên</div>
+        <div class="space"></div>
+        <form action="">
+            <div class="box-input-1">
+                <div class="title">Mã sinh viên</div>
+                <input type="text" id="codeStudent">
+                <i id="noti-1"></i>
+            </div>
+            <div class="space"></div>
+            <div class="box-input-1">
+                <div class="title">Họ và tên</div>
+                <input type="text" id="nameStudent">
+                <i id="noti-2"></i>
+            </div>
+            <div class="space"></div>
+            <div class="box-input-1">
+                <div class="title">Email</div>
+                <input type="text" id="email">
+                <i id="noti-3"></i>
+            </div>
+            <div class="space"></div>
+            <fieldset id="gender">
+                <legend>Giới tính</legend>
+                <input type="radio" id="check" value="1" name="gender"> <label for="check">Nam</label>
+                <input type="radio" id="check1" value="2" name="gender"> <label for="check1">Nữ</label>
+            </fieldset>
+            <i id="noti-4"></i>
+            <div class="space"></div>
+            <fieldset id="favorite-1">
+                <legend>Sở Thích</legend>
+                <input type="checkbox" name="favorite" id="sport"> <label for="sport">Thể thao</label>
+                <input type="checkbox" name="favorite" id="travel"> <label for="travel">Du lịch</label>
+                <input type="checkbox" name="favorite" id="music"> <label for="music">Âm nhạc</label>
+                <input type="checkbox" name="favorite" id="food"> <label for="food">Ẩm thực</label>
+                <input type="checkbox" name="favorite" id="another"> <label for="another">khác</label>
+            </fieldset>
+            <i id="noti-5"></i>
+            <div class="space"></div>
+            <div class="box-input-4">
+                <div class="title">Quốc tịch</div>
+                <!-- <input list="job"> -->
+                <select id="nationality">
+                    <option value="0">Chọn quốc tịch</option>
+                    <option value="1">Mỹ</option>
+                    <option value="2">Việt Nam</option>
+                    <option value="3">Trung Quốc</option>
+                    <option value="4">Anh</option>
+                    <option value="5">Pháp</option>
+                </select>
+                <i id="noti-6"></i>
+            </div>
+            <div class="space"></div>
+            <div class="box">
+                <div class="title">Ghi chú</div>
+                <textarea  class="text" name="" id="" cols="60" rows="5" tabindex="2"></textarea>
+            </div>
+            <hr>
+            <div style="text-align: center;"> 
+                <button type="button" class="box-button" onclick="registration()">Đăng ký</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+<script src="js/bai4.js"></script>

@@ -1,0 +1,75 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(to right, #00223E, #FFA17F);
+    display:flex;
+    justify-content: center;
+    /* align-items: center;
+    min-height: 100vh; */
+}
+
+h2 {
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 10px;
+    margin-top: 90px;
+}
+
+.in-box {
+    display: flex;
+    justify-content: center;
+    font-size: 60px;
+    padding: 10px;
+}
+
+.box-hour, .mins-hour {
+    width: 200px;
+    height: 200px;
+    background-color: #2196f3;
+    padding: 10px 30px;
+}
+
+.second-hour {
+    width: 200px;
+    height: 200px;
+    background-color: #ff006a;
+    padding: 10px 30px;
+}
+
+.box-hour, .mins-hour, .second-hour {
+    text-align: center;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+#hour, #mins, #second {
+    border-bottom: 1px solid black;
+}
+
+.box-button {
+    text-align: center;
+}
+
+.box-button button {
+    width: 120px;
+    height: 35px;
+    font-size: 18px;
+    padding: 5px 20px;
+    border: 1px solid gray;
+    background: rgba(0, 0, 0, 0.37);
+    color: white;
+}
+
+.box-button button:hover {
+    background-color: rgba(0, 0, 0, 0.705);
+    color: white;
+}

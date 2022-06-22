@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bv.css">
+    <title>PS21478-Trương Tước Phi</title>
+</head>
+<body>
+    <div class="all-box">
+        <div class="box">
+            <div class="title">
+                Bé vui học toán
+            </div>
+            <div class="box-1">
+                <span>Số X</span>
+                <input type="text" id="firstNumber">
+            </div>
+            <div class="box-2">
+                <span>Số Y</span>
+                <input type="text" id="secondNumber">
+            </div>
+            <div class="box-3">
+                <span>Trả lời</span>
+                <input type="text" id="answerCal">
+            </div>
+            <div class="box-4">
+                <span>Kết quả</span>
+                <b id="noti"></b>
+            </div>
+            <div class="box-5">
+                <button onclick="randomNumber()" name="but">Tạo số</button>
+                <button onclick="answer()" name="but">OK</button>
+            </div>
+        </div>
+        <div class="box-6">
+            <span>Số lần chơi :</span>
+            <span id="cout"></span>
+        </div>
+    </div>
+</body>
+</html>
+<script src="bv.js"></script>

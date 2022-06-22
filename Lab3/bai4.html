@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS-Bai1-Bai4/bai4.css">
+    <title>Document</title>
+    <script>
+        var day = null;
+        var month = null;
+    </script>
+</head>
+<body>
+    <form action="">
+        <div class="box">
+            <div>
+                <span>
+                    Ngày
+                </span>
+                <select name="" id="one-day">
+                    <script>
+                        for(var i = 1; i <= 31; i++) {
+                            if(i == 6) {
+                                document.write('<option selected>' + 6 + '</option>');
+                            }else {
+                                document.write('<option>' + i + '</option>');
+                            }
+                        }
+                    </script>
+                </select>
+            </div>
+            <div>
+                <span>
+                    Tháng
+                </span>
+                <select name="" id="two-month" onchange="getMonth()">
+                    <script>
+                        for(var i = 1; i <= 12; i++) {
+                            if(i == 7) {
+                                document.write('<option selected>' + 7 + '</option>');
+                            }else {
+                                document.write('<option>' + i + '</option>');
+                            }
+                        }
+                    </script>
+                </select>
+            </div>
+            <div>
+                <span>
+                    Năm
+                </span>
+                <select name="" id="">
+                    <script>
+                        var year = new Date();
+                        var yearPresent = year.getFullYear();
+                        for(var i = 1970; i <= yearPresent; i++) {
+                            if(i == 2003) {
+                                document.write('<option selected>' + 2003 + '</option>');
+                            }else {
+                                document.write('<option>' + i + '</option>');
+                            }
+                        }
+                    </script>
+                </select>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
+<script>
+    function getMonth() {
+        month = document.getElementById('two-month').value;
+        console.log(month);
+        // if(month == 2) {
+        //     for(var i = 1; i <= 28; i++) {
+        //         document.write = '<option value="" id="day">' + i +'</option>' ;
+        //     }
+        // }
+    }
+
+    function getButton() {
+        month = doc
+    }
+    // function getDay() {
+    //     var x = document.getElementById('two-month').value;
+    //     console.log(x);
+    //     if(x == 2) {
+    //         for(var i = 1; i <= 28; i++) {
+    //             document.getElementById('day').innerHTML = '<span>' + i + '</span>'
+    //         }
+    //     }else {
+    //         for(var i = 1; i <= 31; i++) {
+    //             document.getElementById('day').innerHTML = '<span>' + i + '</span>'
+    //         }
+    //     }
+    // }
+</script>

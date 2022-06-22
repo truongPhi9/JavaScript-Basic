@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bai1.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="in-box">
+        <div class="box">
+            <img src="Picture/iphone-12.png" alt="">
+        </div>
+        <div class="box-info">
+            <div>
+                <div class="title" id="title-product">Apple iPhone 12 Pro Max</div>
+            </div>
+            <div class="amount">
+                <button id="reduction" style="border-radius: 5px 0 0 5px;" onclick="reductionItem()">-</button>
+                <input id="data" type="number" value="1" data-price="12000000">
+                <button id="add" style="border-radius: 0 5px 5px 0;" onclick="addItem()">+</button>
+            </div>
+            <div class="title-product">
+                <span>Name :</span> <span id="show-product"></span>
+            </div>
+            <div class="Total-money">
+                <span>Total money : </span>
+                <span id="show-money">12,000,000 VNĐ</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="js/bai1.js"></script>

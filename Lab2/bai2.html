@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        width: 100%;
+        margin: auto;
+        border: 1px solid darkgray;
+    }
+    
+    header {
+        background-color: #39C669;
+        height: 120px;
+        position: relative;
+    }
+
+    main {
+        background: #7ddfce;
+        min-height: 400px;
+    }
+
+    .in-main {
+        margin-left: 25px;
+    }
+
+    footer {
+        background: #50C639;
+        height: 100px;
+        font-size: 18px;
+        line-height: 27px;
+    }
+
+    #chao {
+        font-size: 30px;
+        color: steelblue;
+        font-weight: bold;
+        font-style: italic;
+        position: absolute;
+        top: 35%;
+        left: 38%;
+        right: 40%;
+    }
+
+    ul li {
+        list-style: decimal;
+        font-size: 20px;
+        line-height: 33px;
+    }
+
+    b {
+        color: rgb(211, 70, 60);
+    }
+
+    .in-footer {
+        padding-top: 10px;
+        width: 20%;
+        margin: 0 auto;
+    }
+</style>
+<body>
+    <div class="container">
+        <header>
+            <div id="chao">    
+                <script>
+                    var time = new Date();
+                    var gio = time.getHours();
+                    if(gio < 12) {
+                        document.write("Chào buổi sáng")
+                    }else if (gio < 18) {
+                        document.write("chào buổi chiều");
+                    }else {
+                        document.write("Chào buổi tối");
+                    }
+                </script>
+                <script>
+                    var time1 = new Date();
+                    var gio1 = time.getHours();
+                    var phut1 = time.getMinutes();
+                    document.write(gio1 + ":" + phut1);
+                </script>
+            </div>
+        </header>
+        <main>
+            <div class="in-main">
+                <h2 style="margin: 0; color: #0693E3; padding-top: 35px;">JAVASCRIPT CÓ THỂ LÀM GÌ?</h2>
+            <ul>
+                <li>
+                    Tạo menu xổ xuống. Các item menu  khi đưa chuột vào sẽ xổ xuống các mục  con của nó.
+                </li>
+                <li>
+                    Thay đổi nội dung trang web. Ví dụ: hiện kết quả khen/chê tùy user trả lời câu hỏi đúng <br>
+                    dau, hiện lời chào tùy thời gian buổi sáng hay chiều…
+                </li>
+                <li>
+                    Thêm các thành phần động vào trang web như slide show, carousel
+                </li>
+                <li>
+                    Tạo các hiệu ứng cho hình ảnh, text…trong trang. Ví dụ các hiệu ứng ẩn hiện hình, đổi <br>
+                    hình khi đưa chuột vào.
+                </li>
+                <li>
+                    JavaScript có thể dùng viết game
+                </li>
+                <li>
+                    Kiểm tra tình hợp lệ cửa dữ liệu người dùng (trong form). Ví dụ form đăng ký của <br>
+                    facebook
+                </li>
+            </ul>
+            </div>
+        </main>
+        <footer>
+            <div class="in-footer">
+                <div>
+                    <b>Họ tên: </b> <span>Trương Tước Phi</span>
+                </div>
+                <div>
+                    <b>Email: </b> <span>phittps21478@fpt.edu.vn</span>
+                </div>
+                <div>
+                    <b>SĐT: </b> <span>0967773878</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

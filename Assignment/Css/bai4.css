@@ -1,0 +1,132 @@
+html {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 550;
+    background: linear-gradient(
+        115deg,
+        #521DE2 10%,
+        rgba(159, 1, 234, 1) 90%
+    ) no-repeat center center fixed;
+}
+
+.space {
+    padding-top: 20px;
+}
+
+input {
+    border-radius: 8px;
+    padding: 10px;
+    outline: none;
+    font-size: 18px;
+    border: 1px solid gray;
+}
+
+.box-1 {
+    border: 1px solid gray;
+    padding: 20px;
+    margin: 0 auto;
+    box-shadow: 0 0 20px black;
+    border-radius: 8px;
+    width: 460px;
+    background-color: #fff;
+}
+
+.box-input-1 input {
+    width: 439px;
+    height: 25px;
+
+}
+
+select {
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+/* .box-input-1 input:focus {
+    background-color: yellow;
+    outline: none;
+    box-shadow: 0 0 3px red;
+    border: 1px solid yellow;
+} */
+
+fieldset {
+    border: 1px solid gray;
+    width: 90%;
+    height: 45px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.box-input-2 input {
+    width: 453px;
+    height: 35px;
+}
+
+.box-input-3 input {
+    width: 450px;
+    height: 30px;
+}
+
+/* .box-input-3 input:focus {
+    background-color: yellow;
+    outline: none;
+    box-shadow: 0 0 3px red;
+    border: 1px solid yellow;
+} */
+
+.box-input-4 input {
+    width: 458px;
+    height: 30px;
+}
+
+/* .box-input-4 input:focus {
+    background-color: yellow;
+    box-shadow: 0 0 3px red;
+    outline: none;
+    border: 1px solid yellow;
+}
+
+.box-input-4 select:focus {
+    background-color: yellow;
+    box-shadow: 0 0 3px red;
+    outline: none;
+    border: 1px solid yellow;
+}
+
+.box textarea:focus{
+    outline: none;
+    background-color: yellow;
+    box-shadow: 0 0 3px red;
+    border: 1px solid yellow;
+} */
+
+.box-button {
+    padding: 8px 30px;
+    font-size: 18px;
+    border: 1px solid rgb(0, 172, 0);
+    border-radius: 10px;
+    color: white;
+    background-color: rgb(0, 172, 0);
+}
+
+.box-button:hover {
+    background-color: green;
+}
+
+.box-button:active {
+    font-size: 17.6px;
+}
+
+.title {
+    margin-bottom: 5px;
+}
+
+i {
+    color: red;
+    font-weight: 400;
+}
+
+#show-noti {
+    display: none;
+}

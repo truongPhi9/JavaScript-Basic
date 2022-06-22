@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/bai4.css">
+    <title>Document</title>
+    <script>
+        var hoten = "Trương Tước Phi";
+        var masv = "PS21478";
+        var email = "phittps21478@fpt.edu.vn";
+        document.getElementById("ngaysinh").innerHTML = email;
+    </script>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .in-table {
+        margin-top: 10%;
+    }
+
+    table {
+        border-collapse: collapse;
+        margin: 0 auto;
+        border: 2px solid #AAE619;
+    }
+
+    tr .first-table {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        padding: 10px 80px 10px 80px;
+    }
+
+    tr td span {
+        padding-left: 20px;
+        font-size: 20px;
+    }
+
+    .box-table {
+        width: 125px;
+    }
+
+    td b {
+        font-size: 20px;
+    }
+
+    .table-1 {
+        padding: 10px;
+    }
+
+    .title-table {
+        width: 20px;
+    }
+
+    tr:first-child {
+        background-color: rgb(68, 68, 206);
+        color: aqua;
+    }
+
+    tr:nth-child(2) {
+        border-right: none;
+    }
+</style>
+<body>
+    <div class="in-table">
+        <table>
+            <tr>
+                <td class="first-table" colspan="2"><h2>Thông tin cá nhân</h2></td>
+            </tr>
+            <tr>
+                <td class="box-table">
+                    <p>
+                        <span>Họ tên : </span>
+                        <td class="table-1">
+                            <b id="hoten">
+                                <script>
+                                  document.write(hoten);
+                                </script>
+                            </b>
+                        </td>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td class="box-table">
+                    <p>
+                        <span>Email : </span>
+                        <td class="table-1">
+                            <b id="ngaysinh"></b>
+                        </td>   
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td class="box-table">
+                    <p>
+                        <span>Mã SV : </span>
+                        <td class="table-1">
+                            <b id="masv">
+                                <script>
+                                  document.write(masv);
+                                </script>
+                            </b>
+                        </td>
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        document.getElementById("ngaysinh").innerHTML = "phittps21478@fpt.edu.vn";
+    </script>
+</body>
+</html>

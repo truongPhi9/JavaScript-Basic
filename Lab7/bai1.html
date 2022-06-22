@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bai1.css">
+    <!-- <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="js/bai1.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-app="lesson1">
+    <div class="box-container" ng-controller="showdisplay">
+        <div class="box">
+            <p>Cập nhật thông tin sinh viên</p>
+            <div class="in-box">
+                <div>
+                    <div class="title">Họ và tên</div>
+                    <input type="text" ng-model="hoten">
+                </div>
+                <div>
+                    <div class="title">Ngày sinh</div>
+                    <input type="text" ng-model="ngaysinh">
+                </div>
+                <div>
+                    <div class="title">Giới tính</div>
+                    <input type="text" ng-model="gioitinh">
+                </div>
+                <div>
+                    <div class="title">Điểm</div>
+                    <input type="text" ng-model="diem">
+                </div>
+                <div class="box-load">
+                    <button class="load" onclick="loadAllWeb()">Nạp lại</button>
+                </div>
+            </div>
+        </div>
+        <div class="show-answer">
+            <p>Thông tin sinh viên</p>
+            <div class="pic">
+                <img src="Picture/{{picture}}" alt="Đây là hình">
+            </div>
+            <div class="all-box">
+                <div>
+                    <span class="title-1">Họ Tên : </span>
+                    <span class="in-answer">{{hoten}}</span>
+                </div>
+                <div>
+                    <span class="title-1">Ngày sinh : </span>
+                    <span class="in-answer">{{ngaysinh}}</span>
+                </div>
+                <div>
+                    <span class="title-1">Giới tính : </span>
+                    <span class="in-answer">{{gioitinh}}</span>
+                </div>
+                <div>
+                    <span class="title-1">Điểm : </span>
+                    <span class="in-answer">{{diem}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="js/bai1.js"></script>

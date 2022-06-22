@@ -1,0 +1,139 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(
+        115deg,
+        rgba(86, 216, 228, 1) 10%,
+        rgba(159, 1, 234, 1) 90%
+    ) no-repeat center center fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;    
+}
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    color: rgb(56, 54, 54);
+}
+
+.box-hour, .box-minute {
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    font-size: 60px;
+    margin: 10px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.box-second {
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    font-size: 60px;
+    margin: 10px;
+    background-color: #ff006a;
+    color: white;
+    text-align: center;
+    border-radius: 15px;
+}
+
+#hour, #minute{
+    border-bottom: 1px solid rgb(216, 204, 204);
+}
+
+#second {
+    border-bottom: 1px solid white;
+}
+
+.click {
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+}
+
+.click button {
+    width: 120px;
+    height: 40px;
+    margin: 10px;
+    font-size: 18px;
+    background-color: #fff;
+    /* border: 1px solid #fff; */
+    border: none;
+    border-radius: 10px;
+}
+
+.click button:hover {
+    background-color: rgb(182, 171, 171);
+    color: white;
+}
+
+#start:active {
+    font-size: 17px;
+}
+
+#stop:active {
+    font-size: 17px;
+}
+
+/* .box-fie {
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 15px;
+} */
+
+fieldset {
+    border: 1px solid white;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+legend {
+    color: white;
+    font-size: 25px;
+}
+
+.in-box {
+    display: flex;
+    justify-content: center
+}
+
+select {
+    border: none;
+    font-size: 20px;
+    height: 50px;
+    border-radius: 10px 0 0 10px;
+}
+
+select:focus {
+    outline: none;
+}
+
+.in-box button {
+    border: none;
+    border-radius: 0 10px 10px 0;
+    padding: 10px;
+    font-size: 17px;
+    background-color: #F08080;
+    color: white;
+}
+
+.in-box button:hover {
+    background-color: #eb2a2a;
+}

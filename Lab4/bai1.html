@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/bai1.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="out-box"> 
+        <div class="box-body">
+            <div class="title">Giải Phương Trình Bậc 2</div>
+            <div class="input-value">
+                <span class="title-value">A</span>  
+                <input id="first-number" type="text">
+            </div>
+            <div class="input-value">
+                <span class="title-value">B</span> 
+                <input id="second-number" type="text">
+            </div>
+            <div class="input-value">
+                <span class="title-value">C</span> 
+                <input id="third-number" type="text">
+            </div>
+            <div class="button-result">
+                <button onclick="result()">Kết quả</button>
+            </div>
+            <div id="noti">
+                <p>* Bạn đã nhập sai dữ liệu vui lòng nhập lại</p>
+            </div>
+        </div>
+        <div id="box-body-2">
+            <div class="title-box-body-2">Kết quả <span id="noti-equation"></span> </div>
+            <div id="result-equation">
+                <div style="font-size: 25px;">
+                    <span>Phương Trình : </span>
+                    <span id="equation"></span>
+                </div>
+                <div id="test-equation-1"></div>
+                <div id="test-equation-2"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="JS/bai1.js"></script>

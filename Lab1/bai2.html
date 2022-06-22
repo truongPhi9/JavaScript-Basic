@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bai2.css">
+    <script src="bai2.js"></script>
+</head>
+<body>
+    <div class="in-table">
+        <table>
+            <tr>
+                <td class="first-table" colspan="2"><h2>Thông tin cá nhân</h2></td>
+            </tr>
+            <tr>
+                <td class="box-table">
+                    <p>
+                        <span>Họ tên : </span>
+                        <td class="table-1">
+                            <b id="hoten">
+                                <script>
+                                  document.write(hoten);
+                                </script>
+                            </b>
+                        </td>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td class="box-table">
+                    <p>
+                        <span>Mã SV : </span>
+                        <td class="table-1">
+                            <b id="masv">
+                                <script>
+                                  document.write(masv);
+                                </script>
+                            </b>
+                        </td>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td class="box-table">
+                    <p>
+                        <span>Ngày sinh : </span>
+                        <td class="table-1">
+                            <b id="ngaysinh"></b>
+                        </td>   
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        document.getElementById("ngaysinh").innerHTML = "6/7/2003";
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bai2.css">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Hiện tại bây giờ là</h2>
+    <div class="container">
+        <div class="box-hour">
+            <div id="hour">00</div>
+            <div>Giờ</div>
+        </div>
+        <div class="box-minute">
+            <div id="minute">00</div>
+            <div>Phút</div>
+        </div>
+        <div class="box-second">
+            <div id="second">00</div>
+            <div>Giây</div>
+        </div>
+    </div>
+    <div class="click">
+        <button id="start" onclick="start()">Bắt đầu</button>
+        <button id="stop" onclick="stop()">Dừng lại</button>
+    </div>
+    <div class="box-fie">
+        <fieldset name="" id="">
+            <legend>Bài học</legend>
+            <div class="in-box">
+                <select name="" id="selectbox">
+                    <option value="">Chọn bài học</option>
+                    <option value="https://longnv.name.vn/lap-trinh-javascript/javascript-la-gi">Javascript là gì</option>
+                    <option value="https://longnv.name.vn/lap-trinh-javascript/bien-kieu-toan-tu-va-bieu-thuc-trong-javascript">Biến kiểu dữ liệu toán tử và biểu thức trong Javascript</option>
+                    <option value="https://longnv.name.vn/lap-trinh-javascript/cau-truc-dieu-khien-trong-javacript">Cấu Trúc Điều Khiển trong Javacript</option>
+                    <option value="https://longnv.name.vn/lap-trinh-javascript/lap-trinh-doi-tuong-trong-javascript-va-mo-hinh-bom">Lập trình đối tượng trong Javascript và mô hình BOM</option>
+                    <option value="https://longnv.name.vn/lap-trinh-javascript/cau-truc-dieu-khien-trong-javacript">Mô hình DOM trong javascript</option>
+                    <option value="https://longnv.name.vn/lap-trinh-javascript/kiem-tra-du-lieu-trong-form-voi-javascript">Validate Form</option>
+                    <option value="https://longnv.name.vn/lap-trinh-javascript/gioi-thieu-ve-javascript-framework">Giới Thiệu về Javascript Framework</option>
+                    <option value="https://longnv.name.vn/lap-trinh-javascript/su-dung-angularjs">Tập tành sử dụng angularJS</option>
+                </select>
+                <button onclick="showLesson()">Xem bài học</button>
+            </div>
+        </fieldset>
+    </div>
+</body>
+</html>
+<script src="js/bai2.js"></script>

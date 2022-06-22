@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .title {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .p1 {
+        color: red;
+        font-size: 25px;
+      }
+      .p2 {
+        color: orangered;
+        font-size: 20px;
+      }
+      .container {
+        margin: 0 auto;
+      }
+      td {
+        padding: 2px;
+      }
+      input {
+        width: 60px;
+        height: 60px;
+      }
+
+      /* class này là ô màu xanh thứ 1 2 3 4*/
+      .box-1, .box-2, .box-3, .box-4{
+        background-color: blue;
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+      }
+
+      /* số bên trong o màu xanh thứ 1 2 3 4*/
+      .box-1 #first-number, .box-2 #calculation, .box-3 #second-number, .box-4 #result {
+        color: white;
+        text-align: center;
+        font-size: 30px;
+      }
+    </style>
+    <script>
+      var so1 = null;
+      var so2 = null;
+      var pheptinh = null;
+      var kq = 0;
+    </script>
+  </head>
+  <body>
+    <div class="title">
+      <div class="p1">
+        <script>
+          document.write("MAY TINH JAVASCRIPT");
+        </script>
+      </div>
+      <div class="p2">
+        <script>
+          document.write("Tác giả: Đào Thị Hương Nhung");
+        </script>
+      </div>
+    </div>
+    <table class="container">
+      <tr>
+        <td><input type="button" value="7" onclick="ganso(7)" /></td>
+        <td><input type="button" value="8" onclick="ganso(8)" /></td>
+        <td><input type="button" value="9" onclick="ganso(9)" /></td>
+        <td><input type="button" value="+" onclick="cal('+')" /></td>
+      </tr>
+      <tr>
+        <td><input type="button" value="4" onclick="ganso(4)" /></td>
+        <td><input type="button" value="5" onclick="ganso(5)" /></td>
+        <td><input type="button" value="6" onclick="ganso(6)" /></td>
+        <td><input type="button" value="-" onclick="cal('-')" /></td>
+      </tr>
+      <tr>
+        <td><input type="button" value="1" onclick="ganso(1)" /></td>
+        <td><input type="button" value="2" onclick="ganso(2)" /></td>
+        <td><input type="button" value="3" onclick="ganso(3)" /></td>
+        <td><input type="button" value="x" onclick="cal('*')" /></td>
+      </tr>
+      <tr>
+        <td><input type="button" value="0" onclick="ganso(0)" /></td>
+        <td><input type="button" value="C" onclick="lamlai()" /></td>
+        <td><input type="button" value="=" onclick="thuchien()" /></td>
+        <td><input type="button" value="/" onclick="cal('/')" /></td>
+      </tr>
+      <tr>
+        <td>
+          <div class="box-1">
+            <div id="first-number"></div>
+          </div>
+        </td>
+        <td>
+          <div class="box-2">
+            <div id="calculation"></div>
+          </div>
+        </td>
+        <td>
+            <div class="box-3">
+                <div id="second-number"></div>
+            </div>
+        </td>
+        <td>
+            <div class="box-4">
+                <div id="result"></div>
+            </div>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+<script>
+  function ganso(n) {
+    if(pheptinh == null) {   /// nếu chưa chọn phép tính thì nhập vào ô thứ 1
+        so1 = n;
+        document.getElementById("first-number").innerHTML = so1;
+    }else {             /// nếu đã chọn phép tính xong thì nhập vào ô thứ 3
+        so2 = n;
+        document.getElementById("second-number").innerHTML = so2;
+    }
+  }
+
+  function cal(c) {   /// cái hàm này là gán phép tính cho biến "pheptinh"
+    pheptinh = c;
+    document.getElementById("calculation").innerHTML = pheptinh;
+  }
+
+  function thuchien() {
+    if(pheptinh == '+') {
+        kq = so1 + so2;
+        console.log(so1);
+        console.log(so2);
+    }else if(pheptinh == '-') {
+        kq = so1 - so2;
+    }else if(pheptinh == '*') {
+        kq = so1 * so2;
+    }else if(pheptinh == '/') {
+        kq = so1 / so2;
+    }
+
+    /// rút gọn kết quả nếu pheptinh là dấu /
+    if(pheptinh == '/') {
+        document.getElementById('result').innerHTML = kq.toFixed(1);   /// bo cac so sau dau ,
+    }else {    /// truong hop khong dau chia thi tinh binh thuong
+        document.getElementById('result').innerHTML = kq;
+    }
+  }
+
+  function lamlai() {
+    a = "";
+    document.getElementById("kp").innerHTML = a;
+    var so1 = null;
+    var so2 = null;
+    var pheptinh = null;
+    var kq = 0;
+  }
+</script>

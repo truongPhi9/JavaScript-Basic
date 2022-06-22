@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS-Bai1-Bai4/bai2.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <div style="text-align: center; font-size: 35px; margin-bottom: 15px; font-weight: 700; color: #7D93E0;">Dãy sô Fibonacci</div>
+        <div class="input-1">
+            Nhập F0 : <input id="first-input" type="text">
+        </div>
+        <div class="input-2">
+            Nhập F1 : <input id="second-input" type="text">
+        </div>
+        <div class="input-1">
+            Số Lần : <input id="count" type="text">
+        </div>
+        <div class="show-button">
+            <button onclick="addIteam()">Kết quả</button>
+        </div>
+        <div class="clear">
+            <button onclick="clearItem(), addIteam()" class="button-clear">xóa</button>
+        </div>
+    </div>
+    <div style="padding: 50px;"></div>
+    <div id="box-answer">
+        <span id="answer"></span>
+    </div>
+</body>
+</html>
+<script>
+    function addIteam() {    /// ham hien thi ket qua fibonacci
+        // lay du lieu tu input
+        var f0 = document.getElementById('first-input').value;
+        var f1 = document.getElementById('second-input').value;
+        var count = document.getElementById('count').value;
+
+        ///chuyen doi kieu du lieu trong input sang dang so thap phan
+        f0 = parseFloat(f0);
+        f1 = parseFloat(f1);
+        count = parseFloat(count);
+
+        /// thuc hien tinh fibonacci
+        var x = new Array();   // khai bao mang de luu ket qua fibonacci
+        // var f;
+        // var html;
+        // var addElement;
+        for(var i = 0; i < count; i++) {
+            f = f0 + f1;
+            f0 = f1;
+            f1 = f;
+            x[i] = f;
+            html = '<span>' + f + " " + '</span>';
+            // var show = document.write('<span>' + f + " " + '</span>');
+            // document.getElementById('answer').innerHTML = '<span>' + f + " " + '</span>';
+            // addElement = document.getElementById('answer').insertAdjacentHTML('beforeend', html);      ///them html vao id 'answer'
+        }
+
+        /// in ra theo dang Array
+        document.getElementById('answer').innerHTML = x.join(' ');
+
+        /// neu khong nhap du lieu cho f0 f1 thi k hien thi ket qua
+        if(isNaN(f0) == true && isNaN(f1) == true) {
+            document.getElementById('box-answer').style.display = 'none';
+        }else {
+            document.getElementById('box-answer').style.display = 'block';
+        }
+        
+
+        // xoa the html cu de them the html moi
+        // var parent = document.getElementById('box-answer');
+        // var child = document.getElementById('answer');
+
+        // if(a > 0 || a < 0) {
+        //     parent.replaceChild(html, child);
+        // }
+    }
+
+    function clearItem() {    /// ham xoa du lieu 
+        f0 = document.getElementById('first-input').value = "";
+        f1 = document.getElementById('second-input').value = "";
+        count = document.getElementById('count').value = "";
+        // location.reload();
+    }
+</script>

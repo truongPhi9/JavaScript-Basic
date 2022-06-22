@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS-Bai1-Bai4/bai1.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="in-box">
+        <div class="box">
+            <div class="first-number">
+                <div style="margin-bottom: 5px;">First Number</div> 
+                <input id="num-1" type="text" placeholder="Nhập số thứ nhất">
+            </div>
+            <div class="second-number">
+                <div style="margin-bottom: 5px;">Second Number</div>  
+                <input id="num-2" type="text" placeholder="Nhập số thứ hai">
+            </div>
+            <div class="box-button">
+                <button onclick="showAnswer()">Result</button>
+            </div>
+            <div id="show-noti">
+                <div class="box-noti">
+                    <div class="border-noti">
+                        Bạn chưa chọn phép tính bên ô tùy chọn mời bạn chọn lại 
+                    </div>
+                </div>
+            </div>
+            <div class="show-answer">
+                <fieldset>
+                    <legend>Kết Quả</legend>
+                    <div id="result">
+
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+        <div class="box-calculation">
+            <div class="cal">
+                <button class="cal-1" onclick="chooseCalculation('+')">+</button>
+                <button class="cal-2" onclick="chooseCalculation('-')">-</button>
+                <button class="cal-3" onclick="chooseCalculation('x')">x</button>
+                <button class="cal-4" onclick="chooseCalculation('÷')">÷</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    // khai bao cac du lieu so thu 1 so thu hai va phep tinh
+    var firstNumber = null;
+    var secondNumber = null;
+    var calculation = null;
+
+    /// ham chon phep tinh
+    function chooseCalculation(cal) {
+        if(cal == '+') {
+            calculation = '+';
+        }else if(cal == '-') {
+            calculation = '-';
+        }else if(cal == 'x') {
+            calculation = 'x';
+        }else if(cal == '÷') {
+            calculation = '÷';
+        }else {
+            calculation = null;
+        }
+    }
+
+    function showAnswer() {
+        /// lay du lieu tu input 
+        firstNumber = document.getElementById('num-1').value;
+        secondNumber = document.getElementById('num-2').value;
+
+        // doi kieu du lieu cho firstNumber secondNumber
+        firstNumber = parseFloat(firstNumber);
+        secondNumber = parseFloat(secondNumber);
+
+        /// kiem tra nguoi dung nhap phep tinh gi
+        var result = null;
+        switch(calculation) {
+            case '+':
+                result = firstNumber + secondNumber;
+                console.log(result = firstNumber + secondNumber);
+                document.getElementById('result').innerHTML = firstNumber + ' + ' + secondNumber + ' = ' + result;
+                break;
+            case '-':
+                result = firstNumber - secondNumber;
+                console.log(result);
+                document.getElementById('result').innerHTML = firstNumber + ' - ' + secondNumber + ' = ' + result;
+                break;
+            case 'x':
+                result = firstNumber * secondNumber;
+                document.getElementById('result').innerHTML = firstNumber + ' x ' + secondNumber + ' = ' + result;
+                break;
+            case '÷':
+                result = firstNumber / secondNumber;
+                document.getElementById('result').innerHTML = firstNumber + ' ÷ ' + secondNumber + ' = ' + result.toFixed(1);
+                break;
+            default: 
+                result = null;
+        }
+
+        /// thong bao neu chua chon cac phep tinh + - * /
+        console.log(calculation);
+        if(calculation == null) {
+            document.getElementById('show-noti').style.display = 'block';
+        }else {
+            document.getElementById('show-noti').style.display = 'none';
+        }
+
+        /// kiem tra neu result = null thi bao loi
+        if(result == null) {
+            document.getElementById('result').innerHTML = '<p style="font-size: 18px; font-weight: 550; word-spacing: normal;"><span style="color: red;">Lỗi: </span>Không thực hiện được phép tính</p>';
+        }
+
+        // neu nguoi dung chon phep tinh ma k nhap gia gia tri thi bao loi
+        if(calculation != null && isNaN(firstNumber) == true || isNaN(secondNumber) == true) {
+            document.getElementById('result').innerHTML = '<p style="font-size: 18px; font-weight: 550; word-spacing: normal;"><span style="color: red;">Lỗi: </span>Không thực hiện được phép tính</p>';
+        }
+    }
+</script>

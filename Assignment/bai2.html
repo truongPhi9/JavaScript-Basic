@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="stylesheet" href="Css/bai2.css">
+    <title>PS21478-Trương Tước Phi</title>
+</head>
+<body>
+    <script>
+        setTimeout(function() {
+            alert('Hình sẽ tự động chuyển ảnh nên nếu bạn muốn dừng thì click vào hình');
+            alert('nếu bạn muốn hình tự động chuyển thì nhấp vào hình lần nữa');
+        }, 2000);
+    </script>
+    <div class="box">
+        <div class="title">Hình Ảnh Ngoài Trời</div>
+        <div class="in-box">
+            <button id="prew" onclick="prew()">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <img onclick="dropPicture()" id="pict" src="Picture/1.jpg" alt="">
+            <button id="next" onclick="next()">
+                <i class="fa-solid fa-angle-right"></i>
+            </button>
+            <i id="pause" class="fa-solid fa-pause" onclick="dropPicture()"></i>
+            <i id="play" class="fa-solid fa-play"></i>
+        </div>
+        <div class="slide"><span id="index-num">1</span>/4</div>
+    </div>
+</body>
+</html>
+<script src="js/bai2.js"></script>

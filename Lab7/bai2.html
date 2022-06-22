@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link rel="stylesheet" href="css/bai2.css">
+    <title>Document</title>
+</head>
+<body ng-app="myApp">
+    <div class="title">
+        Tính diện tích chu vi hình chữ nhật
+    </div>
+    <div class="box" ng-controller="display">
+        <div class="two-box">
+            <span>Chiều dài</span>
+            <input type="text" ng-model="height">
+        </div>
+        <div class="thr-box">
+            <span>Chiều rộng</span>
+            <input type="text" ng-model="width">
+        </div>
+        <div class="show-answer">
+            <button ng-click="calculate()">Tính toán</button>
+        </div>
+        <fieldset>
+            <legend>Đáp án</legend>
+            <div class="for-box">
+                <span>Chu vi</span> : 
+                <span class="answer">{{perimeter}}</span>
+            </div>
+            <div class="for-box">
+                <span>Diện tích</span> : 
+                <span class="answer">{{acreage}}</span>
+            </div>
+        </fieldset>
+    </div>
+</body>
+</html>
+<script src="js/bai2.js"></script>

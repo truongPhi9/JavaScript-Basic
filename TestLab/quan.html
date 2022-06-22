@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;1,100;1,200;1,300&display=swap');
+
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        background-color: #395B64;
+        font-family: 'Roboto Mono', monospace;
+    }
+
+    .container {
+        width: 600px;
+        text-align: center;
+        border-radius: 1rem;
+        background-color: #062C30;
+        margin: auto;
+        color: #fff;
+        border: 2px solid #fff;
+        margin-top: 5rem;
+        box-shadow: 5px 5px 5px rgb(114, 114, 114);
+        padding: 20px;
+        font-size: 1.2em;
+    }
+
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        border: 1px solid black;
+        padding: 6px;
+        text-align: center;
+    }
+
+    caption {
+        font-weight: 600;
+        font-size: 1.2em;
+    }
+
+    button {
+        width: 60px;
+        height: 25px;
+    }
+</style>
+<body>
+    <div class="container">
+        <table>
+          <caption>
+            CÁC SẢN PHẨM HOA
+          </caption>
+          <thead>
+            <tr>
+              <th><input type="checkbox" id="chonhet" /></th>
+              <th>Tên sản phẩm hoa</th>
+              <th>Giá</th>
+              <th>Mua</th>
+            </tr>
+          </thead>
+  
+          <tbody>
+            <tr>
+              <td>
+                <input
+                  type="checkbox"
+                  class="chon"
+                  onchange="dao(this)"
+                />
+              </td>
+              <td>Hạnh phúc trọn vẹn</td>
+              <td>900000</td>
+              <td>
+                <button onclick="them(this)" onchange="dao(this)" disabled>
+                  Chọn
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input
+                  type="checkbox"
+                  class="chon"
+                  onchange="dao(this)"
+                />
+              </td>
+              <td>Con Đường Thành Công</td>
+              <td>1750000</td>
+              <td><button  onclick="them(this)">Chọn</button></td>
+            </tr>
+            <tr>
+              <td>
+                <input
+                  type="checkbox"
+                  class="chon"
+                  onchange="dao(this)"
+                />
+              </td>
+              <td>Phú Quý</td>
+              <td>1300000</td>
+              <td><button  onclick="them(this)">Chọn</button></td>
+            </tr>
+            <tr>
+              <td>
+                <input
+                  type="checkbox"
+                  class="chon"
+                  onchange="dao(this)"
+                />
+              </td>
+              <td>Vững Bước</td>
+              <td>1150000</td>
+              <td><button  onclick="them(this)">Chọn</button></td>
+            </tr>
+            <tr>
+              <td>
+                <input
+                  type="checkbox"
+                  class="chon"
+                  onchange="dao(this)"
+                />
+              </td>
+              <td>Một Cõi Đi Về</td>
+              <td>950000</td>
+              <td><button  onclick="them(this)">Chọn</button></td>
+            </tr>
+          </tbody>
+        </table>
+        <hr style="margin: 20px 0" />
+  
+  
+        <table id="cart">
+          <caption>
+            GIỎ HÀNG CỦA BẠN
+          </caption>
+        </table>
+        <h3>TỔNG SỐ TIỀN: <span id="tong">0</span></h3>
+      </div>
+</body>
+</html>
+<script>
+    function them(button) {
+        var row = button.parentElement.parentElement.cloneNode(true);
+        var btnxoa = row.getElementsByTagName("button")[0];
+        btnxoa.innerText = "xoa";
+        btnxoa.setAttribute("onclick", "xoa(this)");
+        document.getElementById("cart").appendChild(row);
+
+        tinhTong();
+        document.getElementById("cart").style.display = "";
+    }
+
+    function xoa(button) {
+        var row = button.parentElement.parentElement;
+        document.getElementById("cart").removeChild(row);
+
+        tinhTong();
+    }
+
+    function tinhTong() {
+        var cart = document.getElementById("cart");
+        var rows = cart.getElementsByTagName("tr");
+        var tong = 0;
+        for (var i = 0; i < rows.length; i++) {
+            var price = rows[i].children[2].innerText;
+            price = parseInt(price);
+            tong += price;
+        }
+        document.getElementById("tong").innerText = tong;
+    }
+
+    document.getElementById("cart").style.display = "none";
+
+    function dao(obj) {
+        var row = obj.parentElement.parentElement;
+        var btn = row.getElementsByTagName("button")[0];
+        console.log(btn);
+        btn.disabled = !btn.disabled;
+    }
+</script>

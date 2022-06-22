@@ -1,0 +1,148 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: linear-gradient(
+        115deg,
+        #af7adb 10%,
+        #8832CD 90%
+    ) no-repeat center center fixed;
+}
+
+.all-box {
+    display: flex;
+    justify-content: center;
+}
+
+.box {
+    width: 400px;
+    height: 250px;
+    padding: 20px;
+    /* border: 1px solid gray; */
+    margin-top: 80px;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 1px 1px 20px black;
+}
+
+.box-2 {
+    width: 400px;
+    min-height: 250px;
+    padding: 20px;
+    /* border: 1px solid gray; */
+    margin-top: 80px;
+    border-radius: 20px;
+    margin-left: 30px;
+    background-color: #fff;
+    box-shadow: 1px 1px 20px black;
+}
+
+.box .in-box div {
+    margin-bottom: 20px;
+}
+
+.in-box .title {
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 550;
+    color: #8832CD;
+}
+
+.in-box span {
+    font-size: 25px;
+}
+
+.in-box {
+    position: relative;
+}
+
+.in-box input {
+    position: absolute;
+    width: 230px;
+    height: 5px;
+    padding: 15px;
+    font-size: 17px;
+    right: 10px;
+    border-radius: 10px;
+    border: 1px solid gray;
+}
+
+.in-box input:focus {
+    outline: none;
+}
+
+.button-result {
+    text-align: center;
+}
+
+.button-result button {
+    width: 140px;
+    height: 35px;
+    margin-top: 20px;
+    font-size: 20px;
+    padding: 5px 20px;
+    border-radius: 10px;
+    border: none;
+    line-height: 10px;
+    background-color: #8832CD;
+    color: white;
+    border: 1px solid #8832CD;
+}
+
+.button-result button:hover {
+    background-color: #af7adb;
+    color: #830de4;
+}
+
+.button-result button:active {
+    font-size: 18px;
+}
+
+.box-2 .title-2 {
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 550;
+    color: #8832CD;
+}
+
+.in-box-2 span {
+    font-weight: 550;
+}
+
+.box-2 .in-box-2 {
+    border: 1px solid gray;
+    width: 90%;
+    height: 60%;
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 20px;
+    line-height: 45px;
+    margin-bottom: 20px;
+}
+
+.in-box-2 {
+    position: relative;
+}
+
+#name-result, #point-result, #ability-result {
+    position: absolute;
+    left: 150px;
+}
+
+#noti {
+    text-align: center;
+    color: red;
+    display: none;
+}
+
+#noti-in-box-2 {
+    font-weight: 600;
+    color: red;
+    display: none;
+}

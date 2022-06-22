@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/bai3.css">
+    <title>PS21478-Trương Tước Phi</title>
+</head>
+<body>
+    <div class="box">
+        <div class="title">Bán Hàng</div>
+        <select id="listPrice" onchange="choosePrice()">
+            <option value="0">Mức Giá</option>
+            <option value="200">200</option>
+            <option value="400">400</option>
+            <option value="600">600</option>
+            <option value="800">800</option>
+        </select>
+        <table>
+            <tr>
+                <td></td>
+                <td>Hàng hóa</td>
+                <td>Đơn giá</td>
+                <td>Số lượng</td>
+                <td>Thành tiền</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" onchange="onDisabled(this)"></td>
+                <td>Iphone 9</td>
+                <td name="price-1">700</td>
+                <td><input class="input-1" type="text" onkeyup="updateMoney(this)" disabled></td>
+                <td class="price"></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" onchange="onDisabled(this)"></td>
+                <td>SamSung</td>
+                <td name="price-1">400</td>
+                <td><input class="input-1" type="text" onkeyup="updateMoney(this)" disabled></td>
+                <td class="price"></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" onchange="onDisabled(this)"></td>
+                <td>Nokia</td>
+                <td name="price-1">100</td>
+                <td><input class="input-1" type="text" onkeyup="updateMoney(this)" disabled></td>
+                <td class="price"></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" onchange="onDisabled(this)"></td>
+                <td>Sonny Xperia</td>
+                <td name="price-1">450</td>
+                <td><input class="input-1" type="text" onkeyup="updateMoney(this)" disabled></td>
+                <td class="price"></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" onchange="onDisabled(this)"></td>
+                <td>Motorola</td>
+                <td name="price-1">180</td>
+                <td><input class="input-1" type="text" onkeyup="updateMoney(this)" disabled></td>
+                <td class="price"></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" onchange="onDisabled(this)"></td>
+                <td>Oppo</td>
+                <td name="price-1">600</td>
+                <td><input class="input-1" type="text" onkeyup="updateMoney(this)" disabled></td>
+                <td class="price"></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" onchange="onDisabled(this)"></td>
+                <td>Bphone</td>
+                <td name="price-1">90</td>
+                <td><input class="input-1" type="text" onkeyup="updateMoney(this)" disabled></td>
+                <td class="price"></td>
+            </tr>
+            <tr>
+                <td colspan="4">Tổng</td>
+                <td id="sum"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
+<script src="js/bai3.js"></script>

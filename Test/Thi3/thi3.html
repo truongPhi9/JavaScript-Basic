@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="thi3.css">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <div class="title">
+            Nhập sản phẩm
+        </div>
+        <div class="box-1">
+            <div>
+                <input id="name-production" class="input-box" type="text" placeholder="Tên sản phẩm" required minlength="5" maxlength="20">
+                <i id="noti-1"></i>
+            </div>
+            <div>
+                <input type="text" class="input-box" placeholder="Giá sản phẩm">
+            </div>
+        </div>
+        <div>
+            <fieldset class="box-2">
+                <legend>Phẩn Loại</legend>
+                <input type="radio" value="1" name="1">
+                <span>Xách tay</span>
+                <input style="margin-left: 20px;" type="radio" value="2" name="1">
+                <span>Chính hãng</span>
+            </fieldset>
+        </div>
+        <div>
+            <select name="" id="" class="box-3">
+                <option value="">Chủng loại sản phẩm</option>
+                <option value="">Máy tính sách tay</option>
+                <option value="">Máy bộ để bàn</option>
+                <option value="">Linh kiện</option>
+            </select>
+        </div>
+        <div>
+            <fieldset class="box-4">
+                <legend>Nhà sản xuất</legend>
+                <input type="checkbox">
+                <span>Dell</span>
+                <input style="margin-left: 10px;" type="checkbox">
+                <span>Lenovo</span>
+                <input style="margin-left: 10px;" type="checkbox">
+                <span>Khác</span>
+            </fieldset>
+        </div>
+        <div class="box-5">
+            <button type="button" onclick="check()">Lưu Thông Tin</button>
+        </div>
+    </form>
+</body>
+</html>
+<script src="thi3.js"></script>

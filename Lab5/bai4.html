@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bai4.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <div class="title" id="box-check-1">
+            <span>Bạn nhớ mẹ khi nào :</span> <span id="reuslt"></span>
+        </div>
+        <div id="box-check-2">
+            <div>Bạn chưa chọn mục nào</div>
+        </div>
+        <div class="in-box">
+            <!-- <div id="reuslt" ></div> -->
+        </div>
+        <div class="check">
+            <input type="checkbox" name="mom" id="" value="Đói"> Đói
+            <input type="checkbox" name="mom" id="" value="No"> No
+            <input type="checkbox" name="mom" id="" value="Bệnh"> Bệnh
+            <input type="checkbox" name="mom" id="" value="Vui"> Vui
+            <input type="checkbox" name="mom" id="" value="Buồn"> Buồn
+            <div class="button-result">
+                <button onclick="allCheck()">Chọn tất cả</button>
+                <button onclick="check()">Kết quả</button>
+                <button onclick="reload()">Nạp lại</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="js/bai4.js"></script>

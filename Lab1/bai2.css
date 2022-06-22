@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.in-table {
+    margin-top: 10%;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    border: 2px solid #AAE619;
+}
+
+tr .first-table {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 10px 80px 10px 80px;
+}
+
+tr td span {
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+.box-table {
+    width: 125px;
+}
+
+td b {
+    font-size: 20px;
+}
+
+.table-1 {
+    padding: 10px;
+}
+
+.title-table {
+    width: 20px;
+}
+
+tr:first-child {
+    background-color: rgb(68, 68, 206);
+    color: aqua;
+}
+
+tr:nth-child(2) {
+    border-right: none;
+}

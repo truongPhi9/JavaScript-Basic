@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bai3.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <div class="title">
+            Giải Phương Trình Bậc 2
+        </div>
+        <div class="inline-box">
+            <div class="inbox-input">
+                a : <input id="a1" type="text">
+            </div>
+            <div class="inbox-input">
+                b : <input id="b2" type="text">
+                
+            </div>
+            <div class="inbox-input">
+                c : <input id="c3" type="text">
+            </div>
+        </div>
+        <div class="show-answer">
+            <button onclick="addItem()">Hiện thị kết quả</button>
+        </div>
+        <div style="padding: 10px;"></div>
+        <div class="box-output">
+            Phương Trình : <span id="equation"></span>
+            <div id="notifi"></div>
+            <div id="x1"></div>
+            <div id="x2"></div>
+        </div>
+    </div>
+    <script>
+        function addItem() {
+            // lay du lieu tu the input
+            var a = document.getElementById('a1').value;
+            var b = document.getElementById('b2').value;
+            var c = document.getElementById('c3').value;
+
+            // kiem tra cac so a b c
+            if(isNaN(a) == true || isNaN(b) == true || isNaN(c) == true) {
+                alert("Bạn đã nhập sai dữ liệu");
+            }
+
+            if(isNaN(a) == true) {
+                a = document.getElementById('a1').value = "0";
+            }else if(isNaN(b) == true) {
+                b = document.getElementById('b2').value = "0";
+            }else if(isNaN(c) == true) {
+                c = document.getElementById('c3').value = "0";
+            }
+            
+            // chuyen doi kieu du lieu trong input
+            a = parseFloat(a);
+            b = parseFloat(b);
+            c = parseFloat(c);
+            
+            // thuc hien tinh toan
+            var delta = b**2 - 4 * a * c;   // tinh delta
+
+            /// giai nghiem
+            var x1 = ((-b + Math.sqrt(delta)) / (2 * a));  
+            var x2 = ((-b - Math.sqrt(delta)) / (2 * a));
+            
+            if(delta > 0) {
+                // in ra man hinh
+                document.getElementById('notifi').innerHTML = 'Phương Trình có 2 nghiệm phân biệt';
+                document.getElementById('x1').innerHTML = "x1 = " + x1;
+                document.getElementById('x2').innerHTML = "x2 = " + x2;
+            }else if (delta == 0) {
+                x3 = -(b / (2 * a));
+                // in ra man hinh
+                document.getElementById('notifi').innerHTML = 'Phương Trình có 1 nghiệm kép';
+                document.getElementById('x1').innerHTML = "x = " + x3;
+            }else {
+                // in ra man hinh
+                document.getElementById('notifi').innerHTML = 'Phương Trình Vô Nghiệm';
+            }
+
+            // in phuong trinh ra man hinh
+            // var equa = a + "x<sup>2</sup>" + " + " + b + "x" + " + " + c + " = 0";
+            // document.getElementById("equation").innerHTML = equa;
+
+            // khong in ra so neu a b = 1
+            if(a == 1) {
+                a = '';
+                var equa = a + "x<sup>2</sup>" + b + "x" + c + " = 0";
+                document.getElementById("equation").innerHTML = equa;
+            }
+            if(b == 1) {
+                b = ' + ' + '';
+                var equa = a + "x<sup>2</sup>" + b + "x" + c + " = 0";
+                document.getElementById("equation").innerHTML = equa;
+            }
+
+            // khong in ra so neu a b = -1
+            if(a == -1) {
+                a = '-' + '';
+                var equa = a + "x<sup>2</sup>" + b + "x" + c + " = 0";
+                document.getElementById("equation").innerHTML = equa;
+            }
+            if(b == -1) {
+                b = ' - ' + '';
+                var equa = a + "x<sup>2</sup>" + b + "x" + c + " = 0";
+                document.getElementById("equation").innerHTML = equa;
+            }
+
+            // doi dau '+' cho b va c 
+            if(b > 0) {
+                b = " + " + b;
+                var equa = a + "x<sup>2</sup>" + b + "x" + c + " = 0";
+                document.getElementById("equation").innerHTML = equa;
+            }
+            if(c > 0) {
+                c = " + " + c;
+                var equa = a + "x<sup>2</sup>" + b + "x" + c + " = 0";
+                document.getElementById("equation").innerHTML = equa;
+            }
+            
+            /// doi dau '-' cho a, b va c
+            if(b < 0) {    
+                b *= -1;
+                b = " - " + b;
+                var equa = a + "x<sup>2</sup>" + b + "x" + c + " = 0";
+                document.getElementById("equation").innerHTML = equa;
+            }
+            if(c < 0) {
+                c *= -1;
+                c = " - " + c;
+                var equa = a + "x<sup>2</sup>" + b + "x" + c + " = 0";
+                document.getElementById("equation").innerHTML = equa;
+            }
+            if(a < 0) {
+                a *= -1;
+                a = "-" + a;
+                var equa = a + "x<sup>2</sup>" + b + "x" + c + " = 0";
+                document.getElementById("equation").innerHTML = equa;
+            }
+
+            /// c = 0 thi khong in ra man hinh
+            if(c == 0) {
+                c = '';
+                var equa = a + "x<sup>2</sup>" + b + "x" + c + " = 0";
+                document.getElementById("equation").innerHTML = equa;
+            }
+
+            // xoa du lieu trong input sau khi nhap xong
+            var a = document.getElementById('a1').value = " ";
+            var b = document.getElementById('b2').value = " ";
+            var c = document.getElementById('c3').value = " ";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bai2.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <div class="title">
+            Đặt hàng
+        </div>
+        <div class="second-box">
+            <div>
+                <div class="inbox">
+                    <span>Sản phẩm </span>
+                    <input id="name-production" class="input" type="text" placeholder="Nhập tên sản phẩm">
+                </div>
+                <div class="inbox">
+                    <span>Loại </span>
+                    <select id="type-product">
+                        <option value="">Chọn loại sản phẩm</option>
+                        <option value="Điện Thoại">Điện Thoại</option>
+                        <option value="Máy Tính">Máy Tính</option>
+                    </select>
+                </div>
+                <div class="inbox">
+                    <span>Đơn giá</span>
+                    <input id="price" class="input" type="text" placeholder="Nhập đơn giá">
+                </div>
+                <div class="inbox">
+                    <span>Nơi nhận hàng</span>
+                    <input name="lacation" class="ra" type="radio" onclick="show(false)"> <span>Nội thành</span>
+                    <input name="lacation" class="ra" type="radio" onclick="show(true)"> <span>Ngoại thành</span>
+                </div>
+                <div class="inbox" id="vc">
+                    <span>Phí vận chuyển</span>
+                    <input class="input" type="text" value="100000">
+                </div>
+                <div class="noti">
+                    <div id="show-noti"></div>
+                </div>
+                <div class="sub">
+                    <div class="insub">
+                        <button onclick="checkItem()">Đặt mua</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="js/bai2.js"></script>
